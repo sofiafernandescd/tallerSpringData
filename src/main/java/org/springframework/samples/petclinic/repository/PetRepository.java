@@ -22,10 +22,17 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
+import org.springframework.samples.petclinic.model.Vet;
 import org.springframework.transaction.annotation.Transactional;
 
 public interface PetRepository extends JpaRepository<Pet, Integer> {
 
+	List<Pet> findByBirthDate(Date date);
+	
+	List<Pet> findByBirthDateBetweenOrderByBirthDate(Date date1, Date date2);
+
+	
+	
     
     
 }

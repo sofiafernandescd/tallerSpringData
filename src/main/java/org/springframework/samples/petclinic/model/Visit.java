@@ -28,6 +28,8 @@ import javax.persistence.TemporalType;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Simple JavaBean domain object representing a visit.
  *
@@ -122,7 +124,8 @@ public class Visit extends BaseEntity {
         this.petId = petId;
     }
     
-    @OneToOne(fetch = FetchType.LAZY)
+  /*  @OneToOne(fetch = FetchType.EAGER)
+    @JsonIgnore
     private Bill bill;
 
 
@@ -134,7 +137,7 @@ public class Visit extends BaseEntity {
 	public void setBill(Bill bill) {
 		this.bill = bill;
 	}
-
+*/
 
 	@Override
 	public String toString() {

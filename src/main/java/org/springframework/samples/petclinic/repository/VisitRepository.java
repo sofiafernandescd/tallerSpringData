@@ -19,10 +19,12 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.samples.petclinic.model.Visit;
+import org.springframework.stereotype.Service;
 
 public interface VisitRepository extends JpaRepository<Visit, Integer> {
 
     List<Visit> findByPetId(Integer petId);
-   
+    
+    List<Visit> findTop4ByOrderByDateDesc();
    
 }
