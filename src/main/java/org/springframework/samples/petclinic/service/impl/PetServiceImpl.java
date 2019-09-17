@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class PetServiceImpl implements PetService{
 	
 	@Autowired
-	PetRepository petRepository;
+	private PetRepository petRepository;
 
 	public void save(Pet pet) {
 		petRepository.save(pet);
@@ -32,6 +32,8 @@ public class PetServiceImpl implements PetService{
 	public List<Pet> findByBirthDateBetweenOrderByBirthDate(Date date1, Date date2) {
 		return petRepository.findByBirthDateBetweenOrderByBirthDate(date1,date2);
 	}
+	
+	
 
 	
 	
