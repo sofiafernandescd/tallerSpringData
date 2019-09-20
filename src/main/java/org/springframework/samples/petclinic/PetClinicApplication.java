@@ -30,6 +30,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.samples.petclinic.repository.BillRepository;
+import org.springframework.samples.petclinic.repository.OfferRepository;
 import org.springframework.samples.petclinic.repository.OwnerRepository;
 import org.springframework.samples.petclinic.repository.PetRepository;
 import org.springframework.samples.petclinic.repository.SpecialityRepository;
@@ -61,16 +62,19 @@ public class PetClinicApplication {
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
-}
+
 	
-	/*@Bean
-	public CommandLineRunner demoOwnerRepository(BillRepository billRepository, PetRepository petRepository, VisitRepository visitRepository) {
+	@Bean
+	public CommandLineRunner demoOwnerRepository(BillRepository billRepository, PetRepository petRepository, VisitRepository visitRepository, OfferRepository offerRepository) {
 		return (args) -> {
 			log.info("*****************************************************");
 			log.info("BOOTCAMP - Spring y Spring Data - vetRepository");
 			log.info("*****************************************************");
-
-			*/
+		
+		
+		};
+	}
+}
 //			log.info("1 - Todas as faturas da BBDD");
 //			int counter = 1;
 //			for(Bill b : billRepository.findAll()) {

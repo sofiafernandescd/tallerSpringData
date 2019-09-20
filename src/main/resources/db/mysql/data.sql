@@ -51,3 +51,8 @@ INSERT IGNORE INTO visits VALUES (1, 7, '2010-03-04', 'rabies shot');
 INSERT IGNORE INTO visits VALUES (2, 8, '2011-03-04', 'rabies shot');
 INSERT IGNORE INTO visits VALUES (3, 8, '2009-06-04', 'neutered');
 INSERT IGNORE INTO visits VALUES (4, 7, '2008-09-04', 'spayed');
+
+INSERT IGNORE INTO offers VALUES (null, 'Solidario', 'Oferta de dinheiro', 0.5,'2010-03-04');
+INSERT IGNORE INTO offers VALUES (null, 'Adoção', 'Oferta de animal', 0.5, '2011-03-04');
+INSERT IGNORE INTO offers VALUES (null, 'Comida','Oferta de comida', 0.5, '2020-06-04');
+INSERT IGNORE INTO offers VALUES (null, 'Tijela','Oferta de tijela', 0.5, '2021-09-04');
